@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e0e0e0;
+            margin: 5px 0;
+            padding: 8px 12px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>College Student | Aspiring Developer</p>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I am a passionate learner currently pursuing my degree. I love working with technology and learning new skills.</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul id="skills-list">
+            <!-- Skills will load here automatically -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Email: your@email.com</p>
+    </section>
+
+    <script>
+        // ⭐️ UPDATE THIS ARRAY when you learn a new skill!
+        const skills = ["HTML", "CSS", "Python", "JavaScript"];
+
+        const skillsList = document.getElementById("skills-list");
+        skills.forEach(skill => {
+            const li = document.createElement("li");
+            li.textContent = skill;
+            skillsList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
